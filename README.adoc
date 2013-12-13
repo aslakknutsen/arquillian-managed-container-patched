@@ -1,0 +1,32 @@
+== Patched version of JBoss EAP Managed Container
+
+Provide a patch to introduce new configuration option:
+
+* +jbossArguments+
+
+Allow the user to send additional arguments to the JBoss instance
+as oppose to the JVM instance.
+
+[source, console]
+----
+java XX Main YY
+----
+
++javaVmArguments+ will place the given arguments in location XX while
++jbossArguments+ will place them in location YY.
+
+
+== Usage
+
+[source, xml]
+----
+<arquillian>
+
+  <container qualifer="x" default="true">
+    <configuration>
+      <property name="jbossArguments">--properties=some-file.properties</property>
+    </configuration>
+  </container>
+
+</arquillian>
+----
