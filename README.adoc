@@ -18,6 +18,21 @@ java XX Main YY
 
 == Usage
 
+=== Configuring Maven
+
+[source, xml]
+----
+...
+  <dependency>
+    <groupId>org.jboss.arquillian.container.jbosseap</groupId>
+    <artifactId>arquillian-jboss-managed</artifactId>
+    <version>0.0.1-SNAPSHOT</version>
+    <scope>test</scope>
+  </dependency>
+...
+----
+
+=== Adding Arguments
 [source, xml]
 ----
 <arquillian>
